@@ -1,34 +1,34 @@
 {
   "schema_version": 1,
-  "content_hash": "34a40d741121d2100e51b39b3d10643ead022dff7ea603c9148ad35e56adb34b",
+  "content_hash": "cbb12c623a045eb108ebaa65979e4f85b680e911e496049d085d4ee6a1efb917",
   "last_updated": "2026-11-25",
   "fetch_status": {
-    "github": "cached_fallback",
+    "github": "live",
     "leetcode": "live",
     "codechef": "live",
-    "skillrack": "live",
+    "skillrack": "cached_fallback",
     "hackerrank": "live"
   },
   "raw": {
     "github": {
-      "source": "github_rest_public",
+      "source": "github_graphql",
       "username": "PRAJEENS2024",
       "public_repos": 20,
       "total_stars": 0,
       "total_forks": 0,
       "followers": 0,
-      "total_contributions": 397,
-      "commits": null,
-      "pull_requests": null,
-      "issues": null,
-      "reviews": null,
+      "total_contributions": 398,
+      "commits": 380,
+      "pull_requests": 0,
+      "issues": 0,
+      "reviews": 0,
       "languages_bytes": {
+        "Python": 463591,
         "TypeScript": 923204,
-        "Python": 390073,
-        "CSS": 152648,
-        "JavaScript": 215016,
+        "CSS": 185139,
+        "JavaScript": 376764,
         "Dockerfile": 517,
-        "HTML": 244542,
+        "HTML": 276158,
         "PowerShell": 2483,
         "Mako": 704,
         "Procfile": 54,
@@ -1874,11 +1874,21 @@
         },
         {
           "date": "2026-11-25",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         }
       ],
       "top_repos": [
+        {
+          "name": "PRAJEENS2024",
+          "description": null,
+          "stars": 0,
+          "forks": 0,
+          "language": "Python",
+          "pushed_at": "2026-11-25T06:57:14Z",
+          "url": "https://github.com/PRAJEENS2024/PRAJEENS2024",
+          "homepage": null
+        },
         {
           "name": "ECE-Connect",
           "description": null,
@@ -1928,19 +1938,16 @@
           "pushed_at": "2026-06-12T14:25:38Z",
           "url": "https://github.com/PRAJEENS2024/Flight-Delay-Prediction",
           "homepage": null
-        },
-        {
-          "name": "mern-learning-journey",
-          "description": null,
-          "stars": 0,
-          "forks": 0,
-          "language": "HTML",
-          "pushed_at": "2026-06-09T06:44:11Z",
-          "url": "https://github.com/PRAJEENS2024/mern-learning-journey",
-          "homepage": null
         }
       ],
-      "recent_events": []
+      "recent_events": [
+        {
+          "date": "2026-11-20",
+          "repo": "PRAJEENS2024/ECE-Connect",
+          "action": "Pushed updates",
+          "url": "https://github.com/PRAJEENS2024/ECE-Connect"
+        }
+      ]
     },
     "leetcode": {
       "username": "PRAJEEN24",
@@ -2039,19 +2046,19 @@
   "derived": {
     "github": {
       "username": "PRAJEENS2024",
-      "source": "github_rest_public",
+      "source": "github_graphql",
       "public_repos": 20,
       "total_stars": 0,
       "total_forks": 0,
       "followers": 0,
-      "total_contributions": 397,
-      "commits": null,
-      "pull_requests": null,
-      "issues": null,
-      "reviews": null,
-      "current_streak": 0,
+      "total_contributions": 398,
+      "commits": 380,
+      "pull_requests": 0,
+      "issues": 0,
+      "reviews": 0,
+      "current_streak": 1,
       "longest_streak": 9,
-      "active_days": 63,
+      "active_days": 64,
       "monthly_contributions": [
         {
           "month": "2026-06",
@@ -2081,38 +2088,38 @@
         {
           "month": "2026-11",
           "label": "Nov",
-          "count": 5
+          "count": 6
         }
       ],
       "top_languages": [
         {
           "name": "TypeScript",
           "bytes": 923204,
-          "percent": 47.8,
+          "percent": 41.4,
           "color": "#3178C6"
         },
         {
           "name": "Python",
-          "bytes": 390073,
-          "percent": 20.2,
+          "bytes": 463591,
+          "percent": 20.8,
           "color": "#3572A5"
         },
         {
-          "name": "HTML",
-          "bytes": 244542,
-          "percent": 12.7,
-          "color": "#E34C26"
-        },
-        {
           "name": "JavaScript",
-          "bytes": 215016,
-          "percent": 11.1,
+          "bytes": 376764,
+          "percent": 16.9,
           "color": "#F1E05A"
         },
         {
+          "name": "HTML",
+          "bytes": 276158,
+          "percent": 12.4,
+          "color": "#E34C26"
+        },
+        {
           "name": "CSS",
-          "bytes": 152648,
-          "percent": 7.9,
+          "bytes": 185139,
+          "percent": 8.3,
           "color": "#563D7C"
         },
         {
@@ -2128,7 +2135,14 @@
           "color": "#6E7681"
         }
       ],
-      "recent_events": [],
+      "recent_events": [
+        {
+          "date": "2026-11-20",
+          "repo": "PRAJEENS2024/ECE-Connect",
+          "action": "Pushed updates",
+          "url": "https://github.com/PRAJEENS2024/ECE-Connect"
+        }
+      ],
       "calendar_days": [
         {
           "date": "2025-11-23",
@@ -3967,8 +3981,8 @@
         },
         {
           "date": "2026-11-25",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         }
       ]
     },

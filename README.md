@@ -135,7 +135,7 @@ I am **Prajeen S**, an **Electronics and Communication Engineering** undergradua
 <p align="center">
   <img src="./assets/svg/contribution-heatmap.svg" alt="GitHub 52-Week Contribution Heatmap and Monthly Velocity" width="100%" />
 </p>
-<p align="center"><sub>Source: GitHub REST &amp; Public Calendar · Last synced on 2026-11-25</sub></p>
+<p align="center"><sub>Source: GitHub GraphQL API · Last synced on 2026-11-25</sub></p>
 <!-- AUTO-GENERATED-END: github-stats -->
 
 ---
@@ -171,7 +171,7 @@ I am **Prajeen S**, an **Electronics and Communication Engineering** undergradua
 
 | Date | Repository | Event |
 | :--- | :--- | :--- |
-| — | No recent public events recorded | — |
+| `2026-11-20` | [ECE-Connect](https://github.com/PRAJEENS2024/ECE-Connect) | Pushed updates |
 
 </td>
 <td width="50%" valign="top">
