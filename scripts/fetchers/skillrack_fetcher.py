@@ -14,11 +14,20 @@ def fetch_skillrack_stats(config: dict[str, Any]) -> dict[str, Any]:
     """Fetch SkillRack programs solved, medals, rank, certificates, and languages."""
     sr_cfg = config["platforms"]["skillrack"]
     auto_cfg = config["automation"]
-    timeout = int(auto_cfg.get("request_timeout_seconds", 15))
+    timeout = max(int(auto_cfg.get("request_timeout_seconds", 15)), 20)
     max_retries = int(auto_cfg.get("max_retries", 3))
 
     url = f"https://www.skillrack.com/faces/resume.xhtml?id={sr_cfg['id']}&key={sr_cfg['key']}"
-    resp = request_with_retry("GET", url, timeout=timeout, max_retries=max_retries)
+    resp = request_with_retry(
+        "GET",
+        url,
+        headers={
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+        },
+        timeout=timeout,
+        max_retries=max_retries,
+    )
     soup = BeautifulSoup(resp.text, "html.parser")
 
     text = re.sub(r"\s+", " ", soup.get_text(" ", strip=True))

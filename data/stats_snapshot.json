@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "content_hash": "cbb12c623a045eb108ebaa65979e4f85b680e911e496049d085d4ee6a1efb917",
+  "content_hash": "bece4020f7d23c9cccbbb4c423f1d7bc9686a85eb6be05489abc68fe25918154",
   "last_updated": "2026-11-25",
   "fetch_status": {
-    "github": "live",
+    "github": "cached_fallback",
     "leetcode": "live",
     "codechef": "live",
-    "skillrack": "cached_fallback",
+    "skillrack": "live",
     "hackerrank": "live"
   },
   "raw": {
@@ -1951,9 +1951,9 @@
     },
     "leetcode": {
       "username": "PRAJEEN24",
-      "total_solved": 624,
+      "total_solved": 625,
       "easy": 352,
-      "medium": 259,
+      "medium": 260,
       "hard": 13,
       "profile_ranking": 135681,
       "streak": 366,
@@ -1963,6 +1963,12 @@
       "contest_global_ranking": 109067,
       "top_percentage": 12.43,
       "recent_submissions": [
+        {
+          "title": "Replace Words",
+          "slug": "replace-words",
+          "url": "https://leetcode.com/problems/replace-words/",
+          "date": "2026-11-25"
+        },
         {
           "title": "Minimum Sum of Squared Difference",
           "slug": "minimum-sum-of-squared-difference",
@@ -1986,12 +1992,6 @@
           "slug": "bank-account-summary-ii",
           "url": "https://leetcode.com/problems/bank-account-summary-ii/",
           "date": "2026-11-23"
-        },
-        {
-          "title": "Product of the Last K Numbers",
-          "slug": "product-of-the-last-k-numbers",
-          "url": "https://leetcode.com/problems/product-of-the-last-k-numbers/",
-          "date": "2026-11-23"
         }
       ]
     },
@@ -2006,7 +2006,7 @@
     },
     "skillrack": {
       "rank": 7855,
-      "programs_solved": 1567,
+      "programs_solved": 1568,
       "gold_medals": 0,
       "silver_medals": 0,
       "bronze_medals": 539,
@@ -2015,7 +2015,7 @@
         "C": 957,
         "Java": 266,
         "CPP23": 154,
-        "Python3": 133,
+        "Python3": 134,
         "SQL": 53,
         "CPP": 4
       },
@@ -3987,12 +3987,12 @@
       ]
     },
     "coding": {
-      "verified_solved_total": 2694,
+      "verified_solved_total": 2696,
       "leetcode": {
         "username": "PRAJEEN24",
-        "total_solved": 624,
+        "total_solved": 625,
         "easy": 352,
-        "medium": 259,
+        "medium": 260,
         "hard": 13,
         "profile_ranking": 135681,
         "streak": 366,
@@ -4002,6 +4002,12 @@
         "contest_global_ranking": 109067,
         "top_percentage": 12.43,
         "recent_submissions": [
+          {
+            "title": "Replace Words",
+            "slug": "replace-words",
+            "url": "https://leetcode.com/problems/replace-words/",
+            "date": "2026-11-25"
+          },
           {
             "title": "Minimum Sum of Squared Difference",
             "slug": "minimum-sum-of-squared-difference",
@@ -4025,12 +4031,6 @@
             "slug": "bank-account-summary-ii",
             "url": "https://leetcode.com/problems/bank-account-summary-ii/",
             "date": "2026-11-23"
-          },
-          {
-            "title": "Product of the Last K Numbers",
-            "slug": "product-of-the-last-k-numbers",
-            "url": "https://leetcode.com/problems/product-of-the-last-k-numbers/",
-            "date": "2026-11-23"
           }
         ]
       },
@@ -4045,7 +4045,7 @@
       },
       "skillrack": {
         "rank": 7855,
-        "programs_solved": 1567,
+        "programs_solved": 1568,
         "gold_medals": 0,
         "silver_medals": 0,
         "bronze_medals": 539,
@@ -4054,7 +4054,7 @@
           "C": 957,
           "Java": 266,
           "CPP23": 154,
-          "Python3": 133,
+          "Python3": 134,
           "SQL": 53,
           "CPP": 4
         },

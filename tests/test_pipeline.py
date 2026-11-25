@@ -135,9 +135,11 @@ def test_readme_marker_replacement_preserves_manual_content(tmp_path: Path) -> N
     svg_dir = tmp_path / "assets" / "svg"
     write_all_svgs(svg_dir, config, snap)
 
-    # Validate all generated SVGs are well-formed XML
+    # Validate all generated SVGs and logo icons are well-formed XML
     for name in ("hero-banner.svg", "github-stats.svg", "contribution-heatmap.svg", "coding-profiles.svg"):
         ET.fromstring((svg_dir / name).read_text(encoding="utf-8"))
+    for logo_file in (svg_dir / "logos").glob("*.svg"):
+        ET.fromstring(logo_file.read_text(encoding="utf-8"))
 
     changed = update_readme(readme, config, snap)
     assert changed is True

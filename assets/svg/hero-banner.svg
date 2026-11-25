@@ -1,70 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 216" width="100%" role="img" aria-label="Prajeen S Developer Portfolio Banner">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 198" width="100%" role="img" aria-label="Prajeen S Terminal Profile Header">
   <defs>
-    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090D16"/>
-      <stop offset="55%" stop-color="#0F172A"/>
-      <stop offset="100%" stop-color="#0D1117"/>
-    </linearGradient>
-    <linearGradient id="accentBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="50%" stop-color="#818CF8"/>
-      <stop offset="100%" stop-color="#34D399"/>
-    </linearGradient>
-    <radialGradient id="glowCyan" cx="85%" cy="22%" r="45%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glowIndigo" cx="15%" cy="85%" r="45%">
-      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#818CF8" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#30363D" fill-opacity="0.45"/>
-    </pattern>
+    <clipPath id="waveClip">
+      <rect x="618" y="54" width="236" height="96"/>
+    </clipPath>
   </defs>
 
-  <rect x="0.5" y="0.5" width="879" height="215" rx="14" fill="url(#heroBg)" stroke="#30363D"/>
-  <rect x="1" y="1" width="878" height="214" rx="14" fill="url(#dotGrid)"/>
-  <rect x="1" y="1" width="878" height="214" rx="14" fill="url(#glowCyan)"/>
-  <rect x="1" y="1" width="878" height="214" rx="14" fill="url(#glowIndigo)"/>
-  <rect x="24" y="0" width="832" height="3" rx="1.5" fill="url(#accentBar)"/>
+  <!-- Seamless GitHub dark canvas with crisp 1px terminal border -->
+  <rect x="0.5" y="0.5" width="879" height="197" rx="6" fill="#0D1117" stroke="#21262D"/>
 
-  <!-- Top status pill -->
-  <rect x="34" y="26" width="248" height="26" rx="13" fill="#161B22" stroke="#30363D"/>
-  <circle cx="50" cy="39" r="4.5" fill="#34D399">
-    <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/>
+  <!-- Top window bar -->
+  <path d="M1 6.5A5.5 5.5 0 0 1 6.5 1h867A5.5 5.5 0 0 1 879 6.5V30H1V6.5z" fill="#010409"/>
+  <line x1="1" y1="30" x2="879" y2="30" stroke="#21262D"/>
+
+  <!-- Muted terminal controls -->
+  <circle cx="18" cy="15.5" r="4.5" fill="#30363D"/>
+  <circle cx="33" cy="15.5" r="4.5" fill="#30363D"/>
+  <circle cx="48" cy="15.5" r="4.5" fill="#30363D"/>
+  <text x="68" y="19" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">prajeens2024@github: ~/profile.ts</text>
+  <circle cx="842" cy="15.5" r="3.5" fill="#39D353">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/>
   </circle>
-  <text x="63" y="43" fill="#CBD5E1" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="600">OPEN TO SWE &amp; FULL-STACK ROLES</text>
+  <text x="852" y="19" fill="#6E7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5">zsh</text>
 
-  <!-- Right subtle circuit motif -->
-  <g stroke="#38BDF8" stroke-opacity="0.28" stroke-width="1.3" fill="none">
-    <path d="M720 44 H786 L802 60 H842"/>
-    <path d="M746 72 H812 L826 86 H842"/>
-    <path d="M700 100 H766 L782 84 H810"/>
-    <circle cx="720" cy="44" r="3" fill="#38BDF8" fill-opacity="0.45"/>
-    <circle cx="746" cy="72" r="3" fill="#818CF8" fill-opacity="0.45"/>
-    <circle cx="700" cy="100" r="3" fill="#34D399" fill-opacity="0.45"/>
-    <circle cx="842" cy="60" r="3" fill="#38BDF8" fill-opacity="0.45"/>
+  <!-- Terminal command prompt -->
+  <text x="24" y="58" fill="#39D353" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.5" font-weight="700">$<tspan fill="#8B949E" font-weight="400"> cat ./identity.ts</tspan></text>
+
+  <!-- Primary Name + blinking block cursor -->
+  <text x="24" y="94" fill="#F0F6FC" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="28" font-weight="700" letter-spacing="-0.5">Prajeen S</text>
+  <rect x="182" y="71" width="11" height="24" fill="#58A6FF">
+    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.49;0.5;0.99;1" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Hard-coded syntax lines -->
+  <text x="24" y="124" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.5">
+    <tspan fill="#FF7B72">const</tspan> <tspan fill="#79C0FF">focus</tspan> <tspan fill="#8B949E">=</tspan> <tspan fill="#A5D6FF">"Full-Stack Systems · Competitive Programming · Embedded/IoT"</tspan><tspan fill="#8B949E">;</tspan>
+  </text>
+  <text x="24" y="146" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.5">
+    <tspan fill="#FF7B72">const</tspan> <tspan fill="#79C0FF">edu</tspan>   <tspan fill="#8B949E">=</tspan> <tspan fill="#A5D6FF">"B.E. ECE '28 @ Sri Eshwar College of Engineering (CGPA: 8.12)"</tspan><tspan fill="#8B949E">;</tspan>
+  </text>
+  <text x="24" y="168" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.5">
+    <tspan fill="#FF7B72">const</tspan> <tspan fill="#79C0FF">prev</tspan>  <tspan fill="#8B949E">=</tspan> <tspan fill="#A5D6FF">"MERN Stack Intern @ AlgoTutor · Coimbatore, IN"</tspan><tspan fill="#8B949E">;</tspan>
+  </text>
+
+  <!-- Subtle animated ECE oscilloscope trace on right -->
+  <line x1="610" y1="48" x2="610" y2="174" stroke="#21262D"/>
+  <g clip-path="url(#waveClip)">
+    <line x1="618" y1="102" x2="854" y2="102" stroke="#161B22" stroke-dasharray="3 3"/>
+    <path d="M618 102 L652 102 L662 84 L672 122 L682 68 L692 134 L702 92 L712 102 L752 102 L762 84 L772 122 L782 68 L792 134 L802 92 L812 102 L854 102"
+          fill="none" stroke="#238636" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+          stroke-dasharray="14 6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2.8s" repeatCount="indefinite"/>
+    </path>
   </g>
-
-  <!-- Primary Display Name -->
-  <text x="34" y="96" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="40" font-weight="800" letter-spacing="-0.8">Prajeen S</text>
-
-  <!-- Headline -->
-  <text x="34" y="128" fill="#38BDF8" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600">Full Stack Developer • Multi-Agent AI Builder • Competitive Programmer</text>
-
-  <!-- Tagline -->
-  <text x="34" y="152" fill="#94A3B8" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13">Electronics &amp; Communication Engineering &#x27;28 | Building Scalable Web, AI &amp; Embedded Systems</text>
-
-  <!-- Bottom credential chips -->
-  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">
-    <rect x="34" y="170" width="212" height="26" rx="6" fill="#161B22" stroke="#30363D"/>
-    <text x="46" y="187" fill="#E2E8F0">Former MERN Intern @ AlgoTutor</text>
-
-    <rect x="256" y="170" width="206" height="26" rx="6" fill="#161B22" stroke="#30363D"/>
-    <text x="268" y="187" fill="#E2E8F0">MERN · Django · TypeScript · AI</text>
-
-    <rect x="472" y="170" width="164" height="26" rx="6" fill="#161B22" stroke="#30363D"/>
-    <text x="484" y="187" fill="#E2E8F0">Coimbatore, India</text>
-  </g>
+  <text x="622" y="168" fill="#6E7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10">SIG // ECE + SWE [ONLINE]</text>
 </svg>

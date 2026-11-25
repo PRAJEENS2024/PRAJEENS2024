@@ -30,17 +30,17 @@ def render_github_stats_section(snapshot: dict[str, Any]) -> str:
     source_label = "GitHub GraphQL API" if gh.get("source") == "github_graphql" else "GitHub REST & Public Calendar"
     return (
         '<p align="center">\n'
-        '  <img src="./assets/svg/github-stats.svg" alt="GitHub Engineering Stats and Language Footprint" width="100%" />\n'
+        '  <img src="./assets/svg/github-stats.svg" alt="GitHub Telemetry and Language Footprint" width="100%" />\n'
         '</p>\n'
         '<p align="center">\n'
-        '  <img src="./assets/svg/contribution-heatmap.svg" alt="GitHub 52-Week Contribution Heatmap and Monthly Velocity" width="100%" />\n'
+        '  <img src="./assets/svg/contribution-heatmap.svg" alt="GitHub 52-Week Contribution Calendar" width="100%" />\n'
         '</p>\n'
-        f'<p align="center"><sub>Source: {escape(source_label)} · Last synced on {escape(updated)}</sub></p>'
+        f'<p align="center"><sub>Source: {escape(source_label)} · Last data change: {escape(updated)}</sub></p>'
     )
 
 
 def render_coding_stats_section(config: dict[str, Any], snapshot: dict[str, Any]) -> str:
-    """Render the auto-generated Competitive Programming Dashboard section."""
+    """Render Competitive Programming Dashboard with logo-linked profiles."""
     coding = snapshot["derived"]["coding"]
     lc = coding.get("leetcode") or {}
     sr = coding.get("skillrack") or {}
@@ -59,23 +59,22 @@ def render_coding_stats_section(config: dict[str, Any], snapshot: dict[str, Any]
     total_verified = coding.get("verified_solved_total", 0)
     return (
         '<p align="center">\n'
-        '  <img src="./assets/svg/coding-profiles.svg" alt="Competitive Programming Dashboard" width="100%" />\n'
+        '  <img src="./assets/svg/coding-profiles.svg" alt="Competitive Programming Metrics" width="100%" />\n'
         '</p>\n\n'
-        f'<p align="center">\n'
-        f'  <strong>Verified Cross-Platform Total:</strong> <code>{total_verified:,}+</code> problems solved · \n'
-        f'  <a href="{escape(lc_url)}">LeetCode</a> · \n'
-        f'  <a href="{escape(sr_url)}">SkillRack</a> · \n'
-        f'  <a href="{escape(cc_url)}">CodeChef</a> · \n'
-        f'  <a href="{escape(hr_url)}">HackerRank</a> · \n'
-        f'  <a href="{escape(gfg_url)}">GeeksforGeeks</a>\n'
-        f'</p>\n'
-        '<p align="center"><sub>Note: LeetCode, SkillRack, CodeChef, and HackerRank metrics sync automatically via live APIs/profiles. '
-        'GeeksforGeeks renders stats client-side without a public unauthenticated API, so it is linked directly without stale numbers.</sub></p>'
+        '<p align="center">\n'
+        f'  <strong>Verified Solved Total:</strong> <code>{total_verified:,}+</code><br/><br/>\n'
+        f'  <a href="{escape(lc_url)}" title="LeetCode"><img src="./assets/svg/logos/leetcode.svg" width="34" height="34" alt="LeetCode" /></a>&nbsp;&nbsp;\n'
+        f'  <a href="{escape(sr_url)}" title="SkillRack"><img src="./assets/svg/logos/skillrack.svg" width="34" height="34" alt="SkillRack" /></a>&nbsp;&nbsp;\n'
+        f'  <a href="{escape(cc_url)}" title="CodeChef"><img src="./assets/svg/logos/codechef.svg" width="34" height="34" alt="CodeChef" /></a>&nbsp;&nbsp;\n'
+        f'  <a href="{escape(hr_url)}" title="HackerRank"><img src="./assets/svg/logos/hackerrank.svg" width="34" height="34" alt="HackerRank" /></a>&nbsp;&nbsp;\n'
+        f'  <a href="{escape(gfg_url)}" title="GeeksforGeeks"><img src="./assets/svg/logos/geeksforgeeks.svg" width="34" height="34" alt="GeeksforGeeks" /></a>\n'
+        '</p>\n'
+        '<p align="center"><sub>LeetCode, SkillRack, CodeChef, and HackerRank sync automatically. GeeksforGeeks renders client-side without a public API, so its logo links directly to the live profile.</sub></p>'
     )
 
 
 def render_activity_section(snapshot: dict[str, Any]) -> str:
-    """Render recent GitHub repository activity and recent LeetCode accepted submissions."""
+    """Render recent GitHub activity and recent LeetCode accepted submissions."""
     gh_events = snapshot["derived"]["github"].get("recent_events") or []
     lc_recent = (snapshot["derived"]["coding"].get("leetcode") or {}).get("recent_submissions") or []
 
@@ -95,28 +94,17 @@ def render_activity_section(snapshot: dict[str, Any]) -> str:
 
     return "\n".join(
         [
-            "<table>",
-            "<tr>",
-            '<td width="50%" valign="top">',
-            "",
             "#### Recent GitHub Activity",
             "",
             "| Date | Repository | Event |",
             "| :--- | :--- | :--- |",
             *gh_lines,
             "",
-            "</td>",
-            '<td width="50%" valign="top">',
-            "",
             "#### Recent LeetCode Accepted",
             "",
             "| Date | Problem |",
             "| :--- | :--- |",
             *lc_lines,
-            "",
-            "</td>",
-            "</tr>",
-            "</table>",
         ]
     )
 

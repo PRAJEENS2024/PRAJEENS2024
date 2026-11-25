@@ -1,4 +1,4 @@
-"""Dark-themed SVG generators for GitHub Profile portfolio visualizations."""
+"""Hard-coded terminal-aesthetic SVG generators for GitHub Profile portfolio."""
 
 from __future__ import annotations
 
@@ -6,6 +6,8 @@ from datetime import date
 from html import escape
 from pathlib import Path
 from typing import Any
+
+from scripts.generators.logos import inline_logo_group, write_logo_svgs
 
 FONT_SANS = "'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif"
 FONT_MONO = "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
@@ -20,97 +22,72 @@ def _fmt_int(value: int | float | None, default: str = "—") -> str:
 
 
 def render_hero_banner_svg(config: dict[str, Any]) -> str:
-    """Render the custom dark-mode developer portfolio hero banner SVG."""
+    """Render a hard-coded Neovim/terminal-style hero SVG with subtle real animations."""
     profile = config.get("profile", {})
     name = escape(profile.get("name", "Prajeen S"))
-    headline = escape(
-        profile.get(
-            "headline",
-            "Full Stack Developer · Multi-Agent AI Builder · Competitive Programmer",
-        )
-    )
-    tagline = escape(
-        profile.get(
-            "tagline",
-            "B.E. Electronics & Communication Engineering '28 · Sri Eshwar College of Engineering",
-        )
-    )
+    username = escape(profile.get("github_username", "PRAJEENS2024"))
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 216" width="100%" role="img" aria-label="{name} Developer Portfolio Banner">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 198" width="100%" role="img" aria-label="{name} Terminal Profile Header">
   <defs>
-    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090D16"/>
-      <stop offset="55%" stop-color="#0F172A"/>
-      <stop offset="100%" stop-color="#0D1117"/>
-    </linearGradient>
-    <linearGradient id="accentBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="50%" stop-color="#818CF8"/>
-      <stop offset="100%" stop-color="#34D399"/>
-    </linearGradient>
-    <radialGradient id="glowCyan" cx="85%" cy="22%" r="45%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glowIndigo" cx="15%" cy="85%" r="45%">
-      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#818CF8" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#30363D" fill-opacity="0.45"/>
-    </pattern>
+    <clipPath id="waveClip">
+      <rect x="618" y="54" width="236" height="96"/>
+    </clipPath>
   </defs>
 
-  <rect x="0.5" y="0.5" width="879" height="215" rx="14" fill="url(#heroBg)" stroke="#30363D"/>
-  <rect x="1" y="1" width="878" height="214" rx="14" fill="url(#dotGrid)"/>
-  <rect x="1" y="1" width="878" height="214" rx="14" fill="url(#glowCyan)"/>
-  <rect x="1" y="1" width="878" height="214" rx="14" fill="url(#glowIndigo)"/>
-  <rect x="24" y="0" width="832" height="3" rx="1.5" fill="url(#accentBar)"/>
+  <!-- Seamless GitHub dark canvas with crisp 1px terminal border -->
+  <rect x="0.5" y="0.5" width="879" height="197" rx="6" fill="#0D1117" stroke="#21262D"/>
 
-  <!-- Top status pill -->
-  <rect x="34" y="26" width="248" height="26" rx="13" fill="#161B22" stroke="#30363D"/>
-  <circle cx="50" cy="39" r="4.5" fill="#34D399">
-    <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/>
+  <!-- Top window bar -->
+  <path d="M1 6.5A5.5 5.5 0 0 1 6.5 1h867A5.5 5.5 0 0 1 879 6.5V30H1V6.5z" fill="#010409"/>
+  <line x1="1" y1="30" x2="879" y2="30" stroke="#21262D"/>
+
+  <!-- Muted terminal controls -->
+  <circle cx="18" cy="15.5" r="4.5" fill="#30363D"/>
+  <circle cx="33" cy="15.5" r="4.5" fill="#30363D"/>
+  <circle cx="48" cy="15.5" r="4.5" fill="#30363D"/>
+  <text x="68" y="19" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">{username.lower()}@github: ~/profile.ts</text>
+  <circle cx="842" cy="15.5" r="3.5" fill="#39D353">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/>
   </circle>
-  <text x="63" y="43" fill="#CBD5E1" font-family="{FONT_MONO}" font-size="11.5" font-weight="600">OPEN TO SWE &amp; FULL-STACK ROLES</text>
+  <text x="852" y="19" fill="#6E7681" font-family="{FONT_MONO}" font-size="10.5">zsh</text>
 
-  <!-- Right subtle circuit motif -->
-  <g stroke="#38BDF8" stroke-opacity="0.28" stroke-width="1.3" fill="none">
-    <path d="M720 44 H786 L802 60 H842"/>
-    <path d="M746 72 H812 L826 86 H842"/>
-    <path d="M700 100 H766 L782 84 H810"/>
-    <circle cx="720" cy="44" r="3" fill="#38BDF8" fill-opacity="0.45"/>
-    <circle cx="746" cy="72" r="3" fill="#818CF8" fill-opacity="0.45"/>
-    <circle cx="700" cy="100" r="3" fill="#34D399" fill-opacity="0.45"/>
-    <circle cx="842" cy="60" r="3" fill="#38BDF8" fill-opacity="0.45"/>
+  <!-- Terminal command prompt -->
+  <text x="24" y="58" fill="#39D353" font-family="{FONT_MONO}" font-size="12.5" font-weight="700">$<tspan fill="#8B949E" font-weight="400"> cat ./identity.ts</tspan></text>
+
+  <!-- Primary Name + blinking block cursor -->
+  <text x="24" y="94" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="28" font-weight="700" letter-spacing="-0.5">{name}</text>
+  <rect x="182" y="71" width="11" height="24" fill="#58A6FF">
+    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.49;0.5;0.99;1" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Hard-coded syntax lines -->
+  <text x="24" y="124" font-family="{FONT_MONO}" font-size="12.5">
+    <tspan fill="#FF7B72">const</tspan> <tspan fill="#79C0FF">focus</tspan> <tspan fill="#8B949E">=</tspan> <tspan fill="#A5D6FF">"Full-Stack Systems · Competitive Programming · Embedded/IoT"</tspan><tspan fill="#8B949E">;</tspan>
+  </text>
+  <text x="24" y="146" font-family="{FONT_MONO}" font-size="12.5">
+    <tspan fill="#FF7B72">const</tspan> <tspan fill="#79C0FF">edu</tspan>   <tspan fill="#8B949E">=</tspan> <tspan fill="#A5D6FF">"B.E. ECE '28 @ Sri Eshwar College of Engineering (CGPA: 8.12)"</tspan><tspan fill="#8B949E">;</tspan>
+  </text>
+  <text x="24" y="168" font-family="{FONT_MONO}" font-size="12.5">
+    <tspan fill="#FF7B72">const</tspan> <tspan fill="#79C0FF">prev</tspan>  <tspan fill="#8B949E">=</tspan> <tspan fill="#A5D6FF">"MERN Stack Intern @ AlgoTutor · Coimbatore, IN"</tspan><tspan fill="#8B949E">;</tspan>
+  </text>
+
+  <!-- Subtle animated ECE oscilloscope trace on right -->
+  <line x1="610" y1="48" x2="610" y2="174" stroke="#21262D"/>
+  <g clip-path="url(#waveClip)">
+    <line x1="618" y1="102" x2="854" y2="102" stroke="#161B22" stroke-dasharray="3 3"/>
+    <path d="M618 102 L652 102 L662 84 L672 122 L682 68 L692 134 L702 92 L712 102 L752 102 L762 84 L772 122 L782 68 L792 134 L802 92 L812 102 L854 102"
+          fill="none" stroke="#238636" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+          stroke-dasharray="14 6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2.8s" repeatCount="indefinite"/>
+    </path>
   </g>
-
-  <!-- Primary Display Name -->
-  <text x="34" y="96" fill="#F8FAFC" font-family="{FONT_SANS}" font-size="40" font-weight="800" letter-spacing="-0.8">{name}</text>
-
-  <!-- Headline -->
-  <text x="34" y="128" fill="#38BDF8" font-family="{FONT_SANS}" font-size="16" font-weight="600">{headline}</text>
-
-  <!-- Tagline -->
-  <text x="34" y="152" fill="#94A3B8" font-family="{FONT_SANS}" font-size="13">{tagline}</text>
-
-  <!-- Bottom credential chips -->
-  <g font-family="{FONT_MONO}" font-size="11">
-    <rect x="34" y="170" width="212" height="26" rx="6" fill="#161B22" stroke="#30363D"/>
-    <text x="46" y="187" fill="#E2E8F0">Former MERN Intern @ AlgoTutor</text>
-
-    <rect x="256" y="170" width="206" height="26" rx="6" fill="#161B22" stroke="#30363D"/>
-    <text x="268" y="187" fill="#E2E8F0">MERN · Django · TypeScript · AI</text>
-
-    <rect x="472" y="170" width="164" height="26" rx="6" fill="#161B22" stroke="#30363D"/>
-    <text x="484" y="187" fill="#E2E8F0">Coimbatore, India</text>
-  </g>
+  <text x="622" y="168" fill="#6E7681" font-family="{FONT_MONO}" font-size="10">SIG // ECE + SWE [ONLINE]</text>
 </svg>
 '''
 
 
 def render_github_stats_svg(snapshot: dict[str, Any]) -> str:
-    """Render custom dark-themed GitHub Engineering Stats & Top Languages SVG."""
+    """Render flat terminal-grid GitHub Metrics & Language Breakdown SVG."""
     gh = snapshot["derived"]["github"]
     username = escape(str(gh.get("username", "PRAJEENS2024")))
     updated = escape(str(snapshot.get("last_updated", "")))
@@ -125,23 +102,21 @@ def render_github_stats_svg(snapshot: dict[str, Any]) -> str:
 
     if gh.get("commits") is not None:
         mix_text = (
-            f"Commits: {_fmt_int(gh['commits'])}  ·  "
-            f"PRs: {_fmt_int(gh.get('pull_requests', 0))}  ·  "
-            f"Issues: {_fmt_int(gh.get('issues', 0))}  ·  "
-            f"Reviews: {_fmt_int(gh.get('reviews', 0))}"
+            f"commits={_fmt_int(gh['commits'])}  "
+            f"prs={_fmt_int(gh.get('pull_requests', 0))}  "
+            f"issues={_fmt_int(gh.get('issues', 0))}  "
+            f"reviews={_fmt_int(gh.get('reviews', 0))}"
         )
     else:
         mix_text = (
-            f"Stars: {total_stars}  ·  "
-            f"Forks: {total_forks}  ·  "
-            f"Followers: {_fmt_int(gh.get('followers', 0))}  ·  "
-            f"Source: Public GitHub API"
+            f"stars={total_stars}  "
+            f"forks={total_forks}  "
+            f"followers={_fmt_int(gh.get('followers', 0))}"
         )
 
-    # Top Languages stacked progress bar (width = 368px)
     langs = gh.get("top_languages") or []
-    bar_x = 478.0
-    bar_w = 368.0
+    bar_x = 468.0
+    bar_w = 388.0
     bar_segments: list[str] = []
     cursor_x = bar_x
     for idx, lang in enumerate(langs):
@@ -152,7 +127,7 @@ def render_github_stats_svg(snapshot: dict[str, Any]) -> str:
             continue
         color = escape(str(lang.get("color", "#8B949E")))
         bar_segments.append(
-            f'<rect x="{cursor_x:.1f}" y="86" width="{seg_w:.1f}" height="12" fill="{color}"/>'
+            f'<rect x="{cursor_x:.1f}" y="66" width="{seg_w:.1f}" height="8" fill="{color}"/>'
         )
         cursor_x += seg_w
 
@@ -160,77 +135,78 @@ def render_github_stats_svg(snapshot: dict[str, Any]) -> str:
     for idx, lang in enumerate(langs[:6]):
         col = idx % 2
         row = idx // 2
-        lx = 478 + col * 190
-        ly = 126 + row * 34
+        lx = 468 + col * 200
+        ly = 104 + row * 28
         color = escape(str(lang.get("color", "#8B949E")))
         lname = escape(str(lang["name"]))
         lpct = f"{lang['percent']}%"
         legend_items.append(
-            f'<circle cx="{lx + 6}" cy="{ly - 4}" r="5" fill="{color}"/>'
-            f'<text x="{lx + 18}" y="{ly}" fill="#E6EDF3" font-family="{FONT_SANS}" font-size="12.5" font-weight="600">{lname}</text>'
-            f'<text x="{lx + 174}" y="{ly}" text-anchor="end" fill="#8B949E" font-family="{FONT_MONO}" font-size="12">{lpct}</text>'
+            f'<rect x="{lx}" y="{ly - 9}" width="8" height="8" rx="1.5" fill="{color}"/>'
+            f'<text x="{lx + 14}" y="{ly}" fill="#C9D1D9" font-family="{FONT_MONO}" font-size="11.5">{lname}</text>'
+            f'<text x="{lx + 186}" y="{ly}" text-anchor="end" fill="#8B949E" font-family="{FONT_MONO}" font-size="11.5">{lpct}</text>'
         )
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 264" width="100%" role="img" aria-label="GitHub Engineering Stats for {username}">
+    gh_icon = inline_logo_group("github", 20, 15, size=16.0, fill="#F0F6FC")
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 218" width="100%" role="img" aria-label="GitHub Engineering Stats for {username}">
   <defs>
     <clipPath id="langBarClip">
-      <rect x="478" y="86" width="368" height="12" rx="6"/>
+      <rect x="468" y="66" width="388" height="8" rx="2"/>
     </clipPath>
   </defs>
 
-  <rect x="0.5" y="0.5" width="879" height="263" rx="14" fill="#0D1117" stroke="#30363D"/>
+  <rect x="0.5" y="0.5" width="879" height="217" rx="6" fill="#0D1117" stroke="#21262D"/>
 
-  <!-- Left Card: GitHub Overview -->
-  <rect x="18" y="18" width="424" height="228" rx="10" fill="#161B22" stroke="#262C36"/>
-  <text x="36" y="46" fill="#F0F6FC" font-family="{FONT_SANS}" font-size="15" font-weight="700">GitHub Engineering Metrics</text>
-  <text x="424" y="46" text-anchor="end" fill="#38BDF8" font-family="{FONT_MONO}" font-size="11.5">@{username}</text>
-  <line x1="36" y1="58" x2="424" y2="58" stroke="#262C36"/>
+  <!-- Header Strip -->
+  <rect x="1" y="1" width="878" height="42" rx="5" fill="#010409"/>
+  <line x1="1" y1="43" x2="879" y2="43" stroke="#21262D"/>
+  {gh_icon}
+  <text x="44" y="27" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="13" font-weight="700">GITHUB // TELEMETRY</text>
+  <text x="434" y="27" text-anchor="end" fill="#6E7681" font-family="{FONT_MONO}" font-size="11">@{username}</text>
+  <text x="468" y="27" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="13" font-weight="700">LANGUAGES // FOOTPRINT</text>
+  <text x="856" y="27" text-anchor="end" fill="#6E7681" font-family="{FONT_MONO}" font-size="11">sync={updated}</text>
 
-  <!-- 2x2 Metric Tiles -->
-  <rect x="36" y="72" width="186" height="58" rx="8" fill="#0D1117" stroke="#262C36"/>
-  <text x="50" y="94" fill="#8B949E" font-family="{FONT_SANS}" font-size="11.5">Contributions (12M)</text>
-  <text x="50" y="118" fill="#38BDF8" font-family="{FONT_MONO}" font-size="22" font-weight="700">{total_contrib}</text>
+  <!-- Vertical column divider -->
+  <line x1="450" y1="1" x2="450" y2="217" stroke="#21262D"/>
 
-  <rect x="238" y="72" width="186" height="58" rx="8" fill="#0D1117" stroke="#262C36"/>
-  <text x="252" y="94" fill="#8B949E" font-family="{FONT_SANS}" font-size="11.5">Current / Best Streak</text>
-  <text x="252" y="118" fill="#34D399" font-family="{FONT_MONO}" font-size="22" font-weight="700">{current_streak}d <tspan fill="#64748B" font-size="14">/ {longest_streak}d</tspan></text>
+  <!-- Left 2x2 flat metric grid -->
+  <line x1="20" y1="115" x2="434" y2="115" stroke="#21262D"/>
+  <line x1="226" y1="54" x2="226" y2="176" stroke="#21262D"/>
 
-  <rect x="36" y="142" width="186" height="58" rx="8" fill="#0D1117" stroke="#262C36"/>
-  <text x="50" y="164" fill="#8B949E" font-family="{FONT_SANS}" font-size="11.5">Public Repositories</text>
-  <text x="50" y="188" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="22" font-weight="700">{public_repos}</text>
+  <text x="24" y="72" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">CONTRIBUTIONS (12M)</text>
+  <text x="24" y="100" fill="#58A6FF" font-family="{FONT_MONO}" font-size="23" font-weight="700">{total_contrib}</text>
 
-  <rect x="238" y="142" width="186" height="58" rx="8" fill="#0D1117" stroke="#262C36"/>
-  <text x="252" y="164" fill="#8B949E" font-family="{FONT_SANS}" font-size="11.5">Active Days (12M)</text>
-  <text x="252" y="188" fill="#818CF8" font-family="{FONT_MONO}" font-size="22" font-weight="700">{active_days}</text>
+  <text x="244" y="72" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">STREAK (CUR / MAX)</text>
+  <text x="244" y="100" fill="#39D353" font-family="{FONT_MONO}" font-size="23" font-weight="700">{current_streak}d <tspan fill="#6E7681" font-size="14">/ {longest_streak}d</tspan></text>
 
-  <text x="36" y="226" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">{escape(mix_text)}</text>
+  <text x="24" y="136" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">PUBLIC REPOS</text>
+  <text x="24" y="164" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="23" font-weight="700">{public_repos}</text>
 
-  <!-- Right Card: Language Footprint -->
-  <rect x="458" y="18" width="404" height="228" rx="10" fill="#161B22" stroke="#262C36"/>
-  <text x="478" y="46" fill="#F0F6FC" font-family="{FONT_SANS}" font-size="15" font-weight="700">Language Footprint</text>
-  <text x="844" y="46" text-anchor="end" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">By Repo Codebase</text>
-  <line x1="478" y1="58" x2="844" y2="58" stroke="#262C36"/>
+  <text x="244" y="136" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">ACTIVE DAYS (12M)</text>
+  <text x="244" y="164" fill="#C9D1D9" font-family="{FONT_MONO}" font-size="23" font-weight="700">{active_days}</text>
 
-  <rect x="478" y="86" width="368" height="12" rx="6" fill="#0D1117"/>
+  <line x1="20" y1="180" x2="434" y2="180" stroke="#21262D"/>
+  <text x="24" y="200" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">{escape(mix_text)}</text>
+
+  <!-- Right Language Bar & Legend -->
+  <rect x="468" y="66" width="388" height="8" rx="2" fill="#161B22"/>
   <g clip-path="url(#langBarClip)">
     {''.join(bar_segments)}
   </g>
-
   {''.join(legend_items)}
-
-  <text x="478" y="226" fill="#64748B" font-family="{FONT_MONO}" font-size="10.5">Synced: {updated} · Auto-updated daily via GitHub Actions</text>
+  <line x1="468" y1="180" x2="856" y2="180" stroke="#21262D"/>
+  <text x="468" y="200" fill="#6E7681" font-family="{FONT_MONO}" font-size="10.5">Weighted by repository source bytes (excluding vendored artifacts)</text>
 </svg>
 '''
 
 
 def render_contribution_heatmap_svg(snapshot: dict[str, Any]) -> str:
-    """Render 52-week contribution heatmap + 6-month velocity bar chart SVG."""
+    """Render flat 52-week contribution heatmap + 6-month velocity chart SVG."""
     gh = snapshot["derived"]["github"]
     days = sorted(gh.get("calendar_days") or [], key=lambda d: d["date"])
     monthly = gh.get("monthly_contributions") or []
     total_contrib = _fmt_int(gh.get("total_contributions", 0))
 
-    # Build grid aligned by Sunday..Saturday rows (0..6)
     cells: list[str] = []
     month_labels: list[str] = []
     seen_months: set[tuple[int, str]] = set()
@@ -238,9 +214,7 @@ def render_contribution_heatmap_svg(snapshot: dict[str, Any]) -> str:
 
     if days:
         first_dt = date.fromisoformat(days[0]["date"])
-        # Python weekday(): Mon=0..Sun=6 -> Sun=0..Sat=6
         first_sun_offset = (first_dt.weekday() + 1) % 7
-        # Keep up to last 53 weeks
         for idx, d in enumerate(days):
             dt = date.fromisoformat(d["date"])
             pos = idx + first_sun_offset
@@ -249,12 +223,12 @@ def render_contribution_heatmap_svg(snapshot: dict[str, Any]) -> str:
             if col >= 53:
                 continue
             x = 56 + col * 14.8
-            y = 66 + row * 14.8
+            y = 74 + row * 14.8
             level = max(0, min(4, int(d.get("level", 0))))
             fill = HEATMAP_COLORS[level]
             count = int(d.get("count", 0))
             cells.append(
-                f'<rect x="{x:.1f}" y="{y:.1f}" width="11.5" height="11.5" rx="2.5" fill="{fill}">'
+                f'<rect x="{x:.1f}" y="{y:.1f}" width="11.2" height="11.2" rx="2" fill="{fill}">'
                 f'<title>{escape(d["date"])}: {count} contribution(s)</title></rect>'
             )
             if dt.day <= 7 and row == 0:
@@ -263,10 +237,9 @@ def render_contribution_heatmap_svg(snapshot: dict[str, Any]) -> str:
                     seen_months.add((col, m_lbl))
                     last_labeled_col = col
                     month_labels.append(
-                        f'<text x="{x:.1f}" y="56" fill="#8B949E" font-family="{FONT_MONO}" font-size="10.5">{m_lbl}</text>'
+                        f'<text x="{x:.1f}" y="64" fill="#8B949E" font-family="{FONT_MONO}" font-size="10">{m_lbl}</text>'
                     )
 
-    # 6-Month Bar Chart at bottom (y=194..264)
     bars: list[str] = []
     if monthly:
         max_m = max((m["count"] for m in monthly), default=1) or 1
@@ -275,48 +248,48 @@ def render_contribution_heatmap_svg(snapshot: dict[str, Any]) -> str:
         for i, m in enumerate(monthly[-6:]):
             bx = bar_area_x + i * step
             val = int(m["count"])
-            bh = max(4, round((val / max_m) * 44)) if val > 0 else 2
-            by = 246 - bh
+            bh = max(4, round((val / max_m) * 38)) if val > 0 else 2
+            by = 248 - bh
             bars.append(
-                f'<rect x="{bx}" y="{by}" width="44" height="{bh}" rx="4" fill="#38BDF8" fill-opacity="0.85"/>'
-                f'<text x="{bx + 22}" y="{by - 5}" text-anchor="middle" fill="#E2E8F0" font-family="{FONT_MONO}" font-size="10.5">{val}</text>'
-                f'<text x="{bx + 22}" y="263" text-anchor="middle" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">{escape(m["label"])}</text>'
+                f'<rect x="{bx}" y="{by}" width="40" height="{bh}" rx="2" fill="#238636"/>'
+                f'<text x="{bx + 20}" y="{by - 5}" text-anchor="middle" fill="#C9D1D9" font-family="{FONT_MONO}" font-size="10.5">{val}</text>'
+                f'<text x="{bx + 20}" y="264" text-anchor="middle" fill="#8B949E" font-family="{FONT_MONO}" font-size="10.5">{escape(m["label"])}</text>'
             )
 
     legend_boxes = "".join(
-        f'<rect x="{748 + i * 16}" y="176" width="11" height="11" rx="2.5" fill="{c}"/>'
+        f'<rect x="{748 + i * 15}" y="182" width="10.5" height="10.5" rx="2" fill="{c}"/>'
         for i, c in enumerate(HEATMAP_COLORS)
     )
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 284" width="100%" role="img" aria-label="GitHub Contribution Heatmap and Monthly Velocity">
-  <rect x="0.5" y="0.5" width="879" height="283" rx="14" fill="#0D1117" stroke="#30363D"/>
-  <rect x="18" y="16" width="844" height="252" rx="10" fill="#161B22" stroke="#262C36"/>
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 280" width="100%" role="img" aria-label="GitHub 52-Week Contribution Heatmap">
+  <rect x="0.5" y="0.5" width="879" height="279" rx="6" fill="#0D1117" stroke="#21262D"/>
+  <rect x="1" y="1" width="878" height="40" rx="5" fill="#010409"/>
+  <line x1="1" y1="41" x2="879" y2="41" stroke="#21262D"/>
 
-  <text x="34" y="39" fill="#F0F6FC" font-family="{FONT_SANS}" font-size="14.5" font-weight="700">Contribution Consistency &amp; Activity Calendar</text>
-  <text x="844" y="39" text-anchor="end" fill="#34D399" font-family="{FONT_MONO}" font-size="11.5">{total_contrib} contributions in the last year</text>
+  <text x="20" y="26" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="13" font-weight="700">CONTRIBUTION // 52W CALENDAR</text>
+  <text x="858" y="26" text-anchor="end" fill="#39D353" font-family="{FONT_MONO}" font-size="11.5">{total_contrib} contributions / year</text>
 
-  <!-- Day labels -->
-  <text x="32" y="91" fill="#64748B" font-family="{FONT_MONO}" font-size="10">Mon</text>
-  <text x="32" y="121" fill="#64748B" font-family="{FONT_MONO}" font-size="10">Wed</text>
-  <text x="32" y="151" fill="#64748B" font-family="{FONT_MONO}" font-size="10">Fri</text>
+  <text x="24" y="99" fill="#6E7681" font-family="{FONT_MONO}" font-size="10">Mon</text>
+  <text x="24" y="129" fill="#6E7681" font-family="{FONT_MONO}" font-size="10">Wed</text>
+  <text x="24" y="159" fill="#6E7681" font-family="{FONT_MONO}" font-size="10">Fri</text>
 
   {''.join(month_labels)}
   {''.join(cells)}
 
-  <text x="716" y="185" fill="#64748B" font-family="{FONT_MONO}" font-size="10">Less</text>
+  <text x="716" y="191" fill="#6E7681" font-family="{FONT_MONO}" font-size="10">Less</text>
   {legend_boxes}
-  <text x="832" y="185" fill="#64748B" font-family="{FONT_MONO}" font-size="10">More</text>
+  <text x="828" y="191" fill="#6E7681" font-family="{FONT_MONO}" font-size="10">More</text>
 
-  <line x1="34" y1="196" x2="844" y2="196" stroke="#262C36"/>
-  <text x="34" y="224" fill="#E6EDF3" font-family="{FONT_SANS}" font-size="13" font-weight="600">Monthly Velocity</text>
-  <text x="34" y="242" fill="#8B949E" font-family="{FONT_SANS}" font-size="11">Last 6 months</text>
+  <line x1="20" y1="202" x2="860" y2="202" stroke="#21262D"/>
+  <text x="24" y="232" fill="#C9D1D9" font-family="{FONT_MONO}" font-size="12" font-weight="700">MONTHLY_TOTALS</text>
+  <text x="24" y="250" fill="#6E7681" font-family="{FONT_MONO}" font-size="10.5">last 6 months</text>
   {''.join(bars)}
 </svg>
 '''
 
 
 def render_coding_profiles_svg(snapshot: dict[str, Any]) -> str:
-    """Render Competitive Programming Dashboard SVG (LeetCode, SkillRack, CodeChef, HackerRank)."""
+    """Render hard-coded Competitive Programming Dashboard with embedded platform vector logos."""
     coding = snapshot["derived"]["coding"]
     lc = coding.get("leetcode") or {}
     sr = coding.get("skillrack") or {}
@@ -329,13 +302,13 @@ def render_coding_profiles_svg(snapshot: dict[str, Any]) -> str:
     lc_med = int(lc.get("medium") or 0)
     lc_hard = int(lc.get("hard") or 0)
     lc_denom = max(lc_total, 1)
-    easy_w = max(8, round((lc_easy / lc_denom) * 230)) if lc_easy else 0
-    med_w = max(8, round((lc_med / lc_denom) * 230)) if lc_med else 0
-    hard_w = max(6, round((lc_hard / lc_denom) * 230)) if lc_hard else 0
+    easy_w = max(6, round((lc_easy / lc_denom) * 230)) if lc_easy else 0
+    med_w = max(6, round((lc_med / lc_denom) * 230)) if lc_med else 0
+    hard_w = max(4, round((lc_hard / lc_denom) * 230)) if lc_hard else 0
 
     lc_rating = _fmt_int(lc.get("contest_rating"))
     lc_contests = _fmt_int(lc.get("contests_attended"))
-    lc_top = f"Top {lc['top_percentage']}%" if lc.get("top_percentage") is not None else "—"
+    lc_top = f"top {lc['top_percentage']}%" if lc.get("top_percentage") is not None else "—"
     lc_streak = _fmt_int(lc.get("streak"))
     lc_rank = _fmt_int(lc.get("profile_ranking"))
 
@@ -344,7 +317,7 @@ def render_coding_profiles_svg(snapshot: dict[str, Any]) -> str:
     sr_certs = _fmt_int(sr.get("certificates"))
     sr_rank = _fmt_int(sr.get("rank"))
     sr_langs = sr.get("languages") or {}
-    sr_lang_str = " · ".join(f"{k}: {v}" for k, v in list(sr_langs.items())[:4]) or "C · Java · C++ · Python"
+    sr_lang_str = "  ".join(f"{k}:{v}" for k, v in list(sr_langs.items())[:4]) or "C Java C++ Python"
 
     cc_solved = _fmt_int(cc.get("total_solved"))
     cc_rating = _fmt_int(cc.get("rating"))
@@ -353,85 +326,93 @@ def render_coding_profiles_svg(snapshot: dict[str, Any]) -> str:
     cc_stars = f"{cc['stars']}★" if cc.get("stars") else "—"
 
     hr_badges = hr.get("badges") or []
-    hr_summary = " · ".join(f"{b['name']} ({b['solved']} solved)" for b in hr_badges[:3]) or "SQL &amp; Java Certified"
+    hr_summary = " · ".join(f"{b['name']} ({b['solved']})" for b in hr_badges[:3]) or "SQL &amp; Java Certified"
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 302" width="100%" role="img" aria-label="Competitive Programming Dashboard">
-  <rect x="0.5" y="0.5" width="879" height="301" rx="14" fill="#0D1117" stroke="#30363D"/>
+    lc_logo = inline_logo_group("leetcode", 22, 56, size=18.0)
+    sr_logo = inline_logo_group("skillrack", 468, 56, size=18.0)
+    cc_logo = inline_logo_group("codechef", 468, 174, size=18.0)
+    hr_logo = inline_logo_group("hackerrank", 468, 250, size=15.0)
 
-  <!-- Left Hero Panel: LeetCode -->
-  <rect x="18" y="18" width="414" height="266" rx="10" fill="#161B22" stroke="#262C36"/>
-  <circle cx="38" cy="40" r="6" fill="#FFA116"/>
-  <text x="52" y="45" fill="#F0F6FC" font-family="{FONT_SANS}" font-size="15.5" font-weight="700">LeetCode</text>
-  <text x="414" y="45" text-anchor="end" fill="#FFA116" font-family="{FONT_MONO}" font-size="11.5">@{escape(str(lc.get("username", "PRAJEEN24")))}</text>
-  <line x1="36" y1="58" x2="414" y2="58" stroke="#262C36"/>
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 284" width="100%" role="img" aria-label="Competitive Programming Metrics">
+  <rect x="0.5" y="0.5" width="879" height="283" rx="6" fill="#0D1117" stroke="#21262D"/>
 
-  <!-- Total Solved & Contest Rating -->
-  <text x="36" y="96" fill="#F8FAFC" font-family="{FONT_MONO}" font-size="34" font-weight="800">{_fmt_int(lc_total)}</text>
-  <text x="36" y="114" fill="#8B949E" font-family="{FONT_SANS}" font-size="12">Problems Solved</text>
+  <!-- Top header bar -->
+  <rect x="1" y="1" width="878" height="40" rx="5" fill="#010409"/>
+  <line x1="1" y1="41" x2="879" y2="41" stroke="#21262D"/>
+  <text x="22" y="26" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="13" font-weight="700">PROBLEM_SOLVING // LIVE PLATFORM METRICS</text>
+  <text x="858" y="26" text-anchor="end" fill="#6E7681" font-family="{FONT_MONO}" font-size="11">sync={updated}</text>
 
-  <rect x="216" y="72" width="198" height="46" rx="8" fill="#0D1117" stroke="#262C36"/>
-  <text x="230" y="91" fill="#8B949E" font-family="{FONT_SANS}" font-size="11">Contest Rating ({lc_contests} contests)</text>
-  <text x="230" y="110" fill="#FFA116" font-family="{FONT_MONO}" font-size="16" font-weight="700">{lc_rating} <tspan fill="#34D399" font-size="12">({escape(lc_top)})</tspan></text>
+  <!-- Vertical column split -->
+  <line x1="448" y1="41" x2="448" y2="283" stroke="#21262D"/>
 
-  <!-- Easy / Medium / Hard Bars -->
-  <text x="36" y="148" fill="#34D399" font-family="{FONT_SANS}" font-size="12" font-weight="600">Easy</text>
-  <rect x="108" y="138" width="230" height="10" rx="5" fill="#0D1117"/>
-  <rect x="108" y="138" width="{easy_w}" height="10" rx="5" fill="#34D399"/>
-  <text x="414" y="148" text-anchor="end" fill="#E2E8F0" font-family="{FONT_MONO}" font-size="12">{lc_easy}</text>
+  <!-- Left: LeetCode -->
+  {lc_logo}
+  <text x="48" y="70" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="13.5" font-weight="700">LeetCode</text>
+  <text x="426" y="70" text-anchor="end" fill="#FFA116" font-family="{FONT_MONO}" font-size="11.5">@{escape(str(lc.get("username", "PRAJEEN24")))}</text>
 
-  <text x="36" y="176" fill="#FBBF24" font-family="{FONT_SANS}" font-size="12" font-weight="600">Medium</text>
-  <rect x="108" y="166" width="230" height="10" rx="5" fill="#0D1117"/>
-  <rect x="108" y="166" width="{med_w}" height="10" rx="5" fill="#FBBF24"/>
-  <text x="414" y="176" text-anchor="end" fill="#E2E8F0" font-family="{FONT_MONO}" font-size="12">{lc_med}</text>
+  <text x="22" y="114" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="32" font-weight="700">{_fmt_int(lc_total)}</text>
+  <text x="22" y="131" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">SOLVED</text>
 
-  <text x="36" y="204" fill="#FB7185" font-family="{FONT_SANS}" font-size="12" font-weight="600">Hard</text>
-  <rect x="108" y="194" width="230" height="10" rx="5" fill="#0D1117"/>
-  <rect x="108" y="194" width="{hard_w}" height="10" rx="5" fill="#FB7185"/>
-  <text x="414" y="204" text-anchor="end" fill="#E2E8F0" font-family="{FONT_MONO}" font-size="12">{lc_hard}</text>
+  <line x1="176" y1="88" x2="176" y2="134" stroke="#21262D"/>
+  <text x="194" y="104" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">CONTEST RATING ({lc_contests} contests)</text>
+  <text x="194" y="126" fill="#FFA116" font-family="{FONT_MONO}" font-size="18" font-weight="700">{lc_rating} <tspan fill="#39D353" font-size="12">({escape(lc_top)})</tspan></text>
 
-  <line x1="36" y1="226" x2="414" y2="226" stroke="#262C36"/>
-  <text x="36" y="248" fill="#8B949E" font-family="{FONT_MONO}" font-size="11.5">Streak: <tspan fill="#F0F6FC" font-weight="700">{lc_streak}d</tspan>  ·  Global Rank: <tspan fill="#F0F6FC" font-weight="700">#{lc_rank}</tspan></text>
-  <text x="36" y="268" fill="#64748B" font-family="{FONT_MONO}" font-size="10.5">Live via LeetCode GraphQL · Synced {updated}</text>
+  <!-- E/M/H progress bars -->
+  <text x="22" y="164" fill="#39D353" font-family="{FONT_MONO}" font-size="11.5">EASY</text>
+  <rect x="94" y="155" width="230" height="8" rx="2" fill="#161B22"/>
+  <rect x="94" y="155" width="{easy_w}" height="8" rx="2" fill="#39D353"/>
+  <text x="426" y="164" text-anchor="end" fill="#C9D1D9" font-family="{FONT_MONO}" font-size="12">{lc_easy}</text>
 
-  <!-- Right Top Panel: SkillRack -->
-  <rect x="448" y="18" width="414" height="126" rx="10" fill="#161B22" stroke="#262C36"/>
-  <circle cx="468" cy="40" r="6" fill="#38BDF8"/>
-  <text x="482" y="45" fill="#F0F6FC" font-family="{FONT_SANS}" font-size="15" font-weight="700">SkillRack</text>
-  <text x="844" y="45" text-anchor="end" fill="#38BDF8" font-family="{FONT_MONO}" font-size="11.5">Rank #{sr_rank}</text>
-  <line x1="466" y1="56" x2="844" y2="56" stroke="#262C36"/>
+  <text x="22" y="190" fill="#FBBF24" font-family="{FONT_MONO}" font-size="11.5">MEDIUM</text>
+  <rect x="94" y="181" width="230" height="8" rx="2" fill="#161B22"/>
+  <rect x="94" y="181" width="{med_w}" height="8" rx="2" fill="#FBBF24"/>
+  <text x="426" y="190" text-anchor="end" fill="#C9D1D9" font-family="{FONT_MONO}" font-size="12">{lc_med}</text>
 
-  <text x="466" y="88" fill="#38BDF8" font-family="{FONT_MONO}" font-size="24" font-weight="800">{sr_solved}</text>
-  <text x="466" y="104" fill="#8B949E" font-family="{FONT_SANS}" font-size="11">Programs Solved</text>
+  <text x="22" y="216" fill="#FB7185" font-family="{FONT_MONO}" font-size="11.5">HARD</text>
+  <rect x="94" y="207" width="230" height="8" rx="2" fill="#161B22"/>
+  <rect x="94" y="207" width="{hard_w}" height="8" rx="2" fill="#FB7185"/>
+  <text x="426" y="216" text-anchor="end" fill="#C9D1D9" font-family="{FONT_MONO}" font-size="12">{lc_hard}</text>
 
-  <text x="612" y="88" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="20" font-weight="700">{sr_medals}</text>
-  <text x="612" y="104" fill="#8B949E" font-family="{FONT_SANS}" font-size="11">Bronze Medals</text>
+  <line x1="22" y1="238" x2="426" y2="238" stroke="#21262D"/>
+  <text x="22" y="262" fill="#8B949E" font-family="{FONT_MONO}" font-size="11.5">streak={lc_streak}d  ·  rank=#{lc_rank}</text>
 
-  <text x="748" y="88" fill="#34D399" font-family="{FONT_MONO}" font-size="20" font-weight="700">{sr_certs}</text>
-  <text x="748" y="104" fill="#8B949E" font-family="{FONT_SANS}" font-size="11">Certificates</text>
+  <!-- Right Top: SkillRack -->
+  {sr_logo}
+  <text x="494" y="70" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="13.5" font-weight="700">SkillRack</text>
+  <text x="856" y="70" text-anchor="end" fill="#58A6FF" font-family="{FONT_MONO}" font-size="11.5">rank=#{sr_rank}</text>
 
-  <text x="466" y="128" fill="#94A3B8" font-family="{FONT_MONO}" font-size="11">{escape(sr_lang_str)}</text>
+  <text x="468" y="106" fill="#58A6FF" font-family="{FONT_MONO}" font-size="22" font-weight="700">{sr_solved}</text>
+  <text x="468" y="122" fill="#8B949E" font-family="{FONT_MONO}" font-size="10.5">SOLVED</text>
 
-  <!-- Right Bottom Panel: CodeChef & HackerRank -->
-  <rect x="448" y="158" width="414" height="126" rx="10" fill="#161B22" stroke="#262C36"/>
-  <circle cx="468" cy="180" r="6" fill="#818CF8"/>
-  <text x="482" y="185" fill="#F0F6FC" font-family="{FONT_SANS}" font-size="15" font-weight="700">CodeChef &amp; HackerRank</text>
-  <text x="844" y="185" text-anchor="end" fill="#818CF8" font-family="{FONT_MONO}" font-size="11.5">{escape(cc_stars)} · {cc_contests} Contests</text>
-  <line x1="466" y1="196" x2="844" y2="196" stroke="#262C36"/>
+  <text x="614" y="106" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="20" font-weight="700">{sr_medals}</text>
+  <text x="614" y="122" fill="#8B949E" font-family="{FONT_MONO}" font-size="10.5">BRONZE MEDALS</text>
 
-  <text x="466" y="226" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="22" font-weight="800">{cc_solved}</text>
-  <text x="466" y="242" fill="#8B949E" font-family="{FONT_SANS}" font-size="11">CodeChef Solved</text>
+  <text x="758" y="106" fill="#39D353" font-family="{FONT_MONO}" font-size="20" font-weight="700">{sr_certs}</text>
+  <text x="758" y="122" fill="#8B949E" font-family="{FONT_MONO}" font-size="10.5">CERTS</text>
 
-  <text x="612" y="226" fill="#818CF8" font-family="{FONT_MONO}" font-size="22" font-weight="800">{cc_rating}</text>
-  <text x="612" y="242" fill="#8B949E" font-family="{FONT_SANS}" font-size="11">Rating (Peak {cc_high})</text>
+  <text x="468" y="144" fill="#8B949E" font-family="{FONT_MONO}" font-size="11">{escape(sr_lang_str)}</text>
 
-  <text x="466" y="268" fill="#34D399" font-family="{FONT_MONO}" font-size="11">HackerRank: <tspan fill="#CBD5E1">{escape(hr_summary)}</tspan></text>
+  <!-- Right Middle: CodeChef -->
+  <line x1="448" y1="158" x2="879" y2="158" stroke="#21262D"/>
+  {cc_logo}
+  <text x="494" y="188" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="13.5" font-weight="700">CodeChef</text>
+  <text x="856" y="188" text-anchor="end" fill="#D0C3B7" font-family="{FONT_MONO}" font-size="11.5">{escape(cc_stars)} · {cc_contests} contests</text>
+
+  <text x="468" y="218" fill="#F0F6FC" font-family="{FONT_MONO}" font-size="20" font-weight="700">{cc_solved} <tspan fill="#8B949E" font-size="11" font-weight="400">solved</tspan></text>
+  <text x="668" y="218" fill="#79C0FF" font-family="{FONT_MONO}" font-size="20" font-weight="700">{cc_rating} <tspan fill="#8B949E" font-size="11" font-weight="400">rating (peak {cc_high})</tspan></text>
+
+  <!-- Right Bottom: HackerRank -->
+  <line x1="448" y1="238" x2="879" y2="238" stroke="#21262D"/>
+  {hr_logo}
+  <text x="490" y="262" fill="#C9D1D9" font-family="{FONT_MONO}" font-size="11.5">{escape(hr_summary)}</text>
 </svg>
 '''
 
 
 def write_all_svgs(svg_dir: Path, config: dict[str, Any], snapshot: dict[str, Any]) -> None:
-    """Generate and write all portfolio SVG assets."""
+    """Generate and write all portfolio SVG assets and platform logo icons."""
     svg_dir.mkdir(parents=True, exist_ok=True)
+    write_logo_svgs(svg_dir / "logos")
     files = {
         "hero-banner.svg": render_hero_banner_svg(config),
         "github-stats.svg": render_github_stats_svg(snapshot),

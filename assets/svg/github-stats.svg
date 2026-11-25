@@ -1,49 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 264" width="100%" role="img" aria-label="GitHub Engineering Stats for PRAJEENS2024">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 218" width="100%" role="img" aria-label="GitHub Engineering Stats for PRAJEENS2024">
   <defs>
     <clipPath id="langBarClip">
-      <rect x="478" y="86" width="368" height="12" rx="6"/>
+      <rect x="468" y="66" width="388" height="8" rx="2"/>
     </clipPath>
   </defs>
 
-  <rect x="0.5" y="0.5" width="879" height="263" rx="14" fill="#0D1117" stroke="#30363D"/>
+  <rect x="0.5" y="0.5" width="879" height="217" rx="6" fill="#0D1117" stroke="#21262D"/>
 
-  <!-- Left Card: GitHub Overview -->
-  <rect x="18" y="18" width="424" height="228" rx="10" fill="#161B22" stroke="#262C36"/>
-  <text x="36" y="46" fill="#F0F6FC" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700">GitHub Engineering Metrics</text>
-  <text x="424" y="46" text-anchor="end" fill="#38BDF8" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">@PRAJEENS2024</text>
-  <line x1="36" y1="58" x2="424" y2="58" stroke="#262C36"/>
+  <!-- Header Strip -->
+  <rect x="1" y="1" width="878" height="42" rx="5" fill="#010409"/>
+  <line x1="1" y1="43" x2="879" y2="43" stroke="#21262D"/>
+  <g transform="translate(20.0, 15.0) scale(0.6667)" fill="#F0F6FC"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></g>
+  <text x="44" y="27" fill="#F0F6FC" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700">GITHUB // TELEMETRY</text>
+  <text x="434" y="27" text-anchor="end" fill="#6E7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">@PRAJEENS2024</text>
+  <text x="468" y="27" fill="#F0F6FC" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700">LANGUAGES // FOOTPRINT</text>
+  <text x="856" y="27" text-anchor="end" fill="#6E7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">sync=2026-11-25</text>
 
-  <!-- 2x2 Metric Tiles -->
-  <rect x="36" y="72" width="186" height="58" rx="8" fill="#0D1117" stroke="#262C36"/>
-  <text x="50" y="94" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5">Contributions (12M)</text>
-  <text x="50" y="118" fill="#38BDF8" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="22" font-weight="700">398</text>
+  <!-- Vertical column divider -->
+  <line x1="450" y1="1" x2="450" y2="217" stroke="#21262D"/>
 
-  <rect x="238" y="72" width="186" height="58" rx="8" fill="#0D1117" stroke="#262C36"/>
-  <text x="252" y="94" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5">Current / Best Streak</text>
-  <text x="252" y="118" fill="#34D399" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="22" font-weight="700">1d <tspan fill="#64748B" font-size="14">/ 9d</tspan></text>
+  <!-- Left 2x2 flat metric grid -->
+  <line x1="20" y1="115" x2="434" y2="115" stroke="#21262D"/>
+  <line x1="226" y1="54" x2="226" y2="176" stroke="#21262D"/>
 
-  <rect x="36" y="142" width="186" height="58" rx="8" fill="#0D1117" stroke="#262C36"/>
-  <text x="50" y="164" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5">Public Repositories</text>
-  <text x="50" y="188" fill="#F0F6FC" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="22" font-weight="700">20</text>
+  <text x="24" y="72" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">CONTRIBUTIONS (12M)</text>
+  <text x="24" y="100" fill="#58A6FF" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="23" font-weight="700">398</text>
 
-  <rect x="238" y="142" width="186" height="58" rx="8" fill="#0D1117" stroke="#262C36"/>
-  <text x="252" y="164" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5">Active Days (12M)</text>
-  <text x="252" y="188" fill="#818CF8" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="22" font-weight="700">64</text>
+  <text x="244" y="72" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">STREAK (CUR / MAX)</text>
+  <text x="244" y="100" fill="#39D353" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="23" font-weight="700">1d <tspan fill="#6E7681" font-size="14">/ 9d</tspan></text>
 
-  <text x="36" y="226" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">Commits: 380  ·  PRs: 0  ·  Issues: 0  ·  Reviews: 0</text>
+  <text x="24" y="136" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">PUBLIC REPOS</text>
+  <text x="24" y="164" fill="#F0F6FC" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="23" font-weight="700">20</text>
 
-  <!-- Right Card: Language Footprint -->
-  <rect x="458" y="18" width="404" height="228" rx="10" fill="#161B22" stroke="#262C36"/>
-  <text x="478" y="46" fill="#F0F6FC" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700">Language Footprint</text>
-  <text x="844" y="46" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">By Repo Codebase</text>
-  <line x1="478" y1="58" x2="844" y2="58" stroke="#262C36"/>
+  <text x="244" y="136" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">ACTIVE DAYS (12M)</text>
+  <text x="244" y="164" fill="#C9D1D9" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="23" font-weight="700">64</text>
 
-  <rect x="478" y="86" width="368" height="12" rx="6" fill="#0D1117"/>
+  <line x1="20" y1="180" x2="434" y2="180" stroke="#21262D"/>
+  <text x="24" y="200" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">commits=380  prs=0  issues=0  reviews=0</text>
+
+  <!-- Right Language Bar & Legend -->
+  <rect x="468" y="66" width="388" height="8" rx="2" fill="#161B22"/>
   <g clip-path="url(#langBarClip)">
-    <rect x="478.0" y="86" width="152.4" height="12" fill="#3178C6"/><rect x="630.4" y="86" width="76.5" height="12" fill="#3572A5"/><rect x="706.9" y="86" width="62.2" height="12" fill="#F1E05A"/><rect x="769.1" y="86" width="45.6" height="12" fill="#E34C26"/><rect x="814.7" y="86" width="30.5" height="12" fill="#563D7C"/><rect x="845.3" y="86" width="2.0" height="12" fill="#012456"/><rect x="847.3" y="86" width="2.0" height="12" fill="#6E7681"/>
+    <rect x="468.0" y="66" width="160.6" height="8" fill="#3178C6"/><rect x="628.6" y="66" width="80.7" height="8" fill="#3572A5"/><rect x="709.3" y="66" width="65.6" height="8" fill="#F1E05A"/><rect x="774.9" y="66" width="48.1" height="8" fill="#E34C26"/><rect x="823.0" y="66" width="32.2" height="8" fill="#563D7C"/><rect x="855.2" y="66" width="2.0" height="8" fill="#012456"/><rect x="857.2" y="66" width="2.0" height="8" fill="#6E7681"/>
   </g>
-
-  <circle cx="484" cy="122" r="5" fill="#3178C6"/><text x="496" y="126" fill="#E6EDF3" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600">TypeScript</text><text x="652" y="126" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12">41.4%</text><circle cx="674" cy="122" r="5" fill="#3572A5"/><text x="686" y="126" fill="#E6EDF3" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600">Python</text><text x="842" y="126" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12">20.8%</text><circle cx="484" cy="156" r="5" fill="#F1E05A"/><text x="496" y="160" fill="#E6EDF3" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600">JavaScript</text><text x="652" y="160" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12">16.9%</text><circle cx="674" cy="156" r="5" fill="#E34C26"/><text x="686" y="160" fill="#E6EDF3" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600">HTML</text><text x="842" y="160" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12">12.4%</text><circle cx="484" cy="190" r="5" fill="#563D7C"/><text x="496" y="194" fill="#E6EDF3" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600">CSS</text><text x="652" y="194" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12">8.3%</text><circle cx="674" cy="190" r="5" fill="#012456"/><text x="686" y="194" fill="#E6EDF3" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600">PowerShell</text><text x="842" y="194" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12">0.1%</text>
-
-  <text x="478" y="226" fill="#64748B" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5">Synced: 2026-11-25 · Auto-updated daily via GitHub Actions</text>
+  <rect x="468" y="95" width="8" height="8" rx="1.5" fill="#3178C6"/><text x="482" y="104" fill="#C9D1D9" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">TypeScript</text><text x="654" y="104" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">41.4%</text><rect x="668" y="95" width="8" height="8" rx="1.5" fill="#3572A5"/><text x="682" y="104" fill="#C9D1D9" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">Python</text><text x="854" y="104" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">20.8%</text><rect x="468" y="123" width="8" height="8" rx="1.5" fill="#F1E05A"/><text x="482" y="132" fill="#C9D1D9" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">JavaScript</text><text x="654" y="132" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">16.9%</text><rect x="668" y="123" width="8" height="8" rx="1.5" fill="#E34C26"/><text x="682" y="132" fill="#C9D1D9" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">HTML</text><text x="854" y="132" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">12.4%</text><rect x="468" y="151" width="8" height="8" rx="1.5" fill="#563D7C"/><text x="482" y="160" fill="#C9D1D9" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">CSS</text><text x="654" y="160" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">8.3%</text><rect x="668" y="151" width="8" height="8" rx="1.5" fill="#012456"/><text x="682" y="160" fill="#C9D1D9" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">PowerShell</text><text x="854" y="160" text-anchor="end" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">0.1%</text>
+  <line x1="468" y1="180" x2="856" y2="180" stroke="#21262D"/>
+  <text x="468" y="200" fill="#6E7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5">Weighted by repository source bytes (excluding vendored artifacts)</text>
 </svg>

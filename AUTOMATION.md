@@ -1,6 +1,6 @@
 # Profile README Automation Architecture
 
-This repository powers an automatically updated GitHub Profile portfolio for **Prajeen S** (`PRAJEENS2024`). Every day, a GitHub Actions workflow collects verified statistics across GitHub and competitive programming platforms, renders self-hosted dark-themed SVG dashboards, and updates only the designated marker sections in `README.md`.
+This repository powers an automatically updated GitHub Profile portfolio for **Prajeen S** (`PRAJEENS2024`). Every day at **06:00 PM IST (`12:30 UTC`)**, a GitHub Actions workflow collects verified statistics across GitHub and competitive programming platforms, renders self-hosted dark-terminal SVG dashboards, and updates only the designated marker sections in `README.md`.
 
 ## Directory Structure
 
