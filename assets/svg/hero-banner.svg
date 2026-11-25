@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 216" width="100%" role="img" aria-label="Prajeen S Developer Portfolio Banner">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="accentBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="85%" cy="22%" r="45%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowIndigo" cx="15%" cy="85%" r="45%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#30363D" fill-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="215" rx="14" fill="url(#heroBg)" stroke="#30363D"/>
+  <rect x="1" y="1" width="878" height="214" rx="14" fill="url(#dotGrid)"/>
+  <rect x="1" y="1" width="878" height="214" rx="14" fill="url(#glowCyan)"/>
+  <rect x="1" y="1" width="878" height="214" rx="14" fill="url(#glowIndigo)"/>
+  <rect x="24" y="0" width="832" height="3" rx="1.5" fill="url(#accentBar)"/>
+
+  <!-- Top status pill -->
+  <rect x="34" y="26" width="248" height="26" rx="13" fill="#161B22" stroke="#30363D"/>
+  <circle cx="50" cy="39" r="4.5" fill="#34D399">
+    <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="63" y="43" fill="#CBD5E1" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="600">OPEN TO SWE &amp; FULL-STACK ROLES</text>
+
+  <!-- Right subtle circuit motif -->
+  <g stroke="#38BDF8" stroke-opacity="0.28" stroke-width="1.3" fill="none">
+    <path d="M720 44 H786 L802 60 H842"/>
+    <path d="M746 72 H812 L826 86 H842"/>
+    <path d="M700 100 H766 L782 84 H810"/>
+    <circle cx="720" cy="44" r="3" fill="#38BDF8" fill-opacity="0.45"/>
+    <circle cx="746" cy="72" r="3" fill="#818CF8" fill-opacity="0.45"/>
+    <circle cx="700" cy="100" r="3" fill="#34D399" fill-opacity="0.45"/>
+    <circle cx="842" cy="60" r="3" fill="#38BDF8" fill-opacity="0.45"/>
+  </g>
+
+  <!-- Primary Display Name -->
+  <text x="34" y="96" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="40" font-weight="800" letter-spacing="-0.8">Prajeen S</text>
+
+  <!-- Headline -->
+  <text x="34" y="128" fill="#38BDF8" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600">Full Stack Developer • Multi-Agent AI Builder • Competitive Programmer</text>
+
+  <!-- Tagline -->
+  <text x="34" y="152" fill="#94A3B8" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13">Electronics &amp; Communication Engineering &#x27;28 | Building Scalable Web, AI &amp; Embedded Systems</text>
+
+  <!-- Bottom credential chips -->
+  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">
+    <rect x="34" y="170" width="212" height="26" rx="6" fill="#161B22" stroke="#30363D"/>
+    <text x="46" y="187" fill="#E2E8F0">Former MERN Intern @ AlgoTutor</text>
+
+    <rect x="256" y="170" width="206" height="26" rx="6" fill="#161B22" stroke="#30363D"/>
+    <text x="268" y="187" fill="#E2E8F0">MERN · Django · TypeScript · AI</text>
+
+    <rect x="472" y="170" width="164" height="26" rx="6" fill="#161B22" stroke="#30363D"/>
+    <text x="484" y="187" fill="#E2E8F0">Coimbatore, India</text>
+  </g>
+</svg>

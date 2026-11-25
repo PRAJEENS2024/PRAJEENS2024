@@ -1,0 +1,52 @@
+# Profile & Automation Configuration
+# Edit this file to customize usernames, tracked platforms, and display preferences.
+
+profile:
+  name: "Prajeen S"
+  github_username: "PRAJEENS2024"
+  headline: "Full Stack Developer • Multi-Agent AI Builder • Competitive Programmer"
+  tagline: "Electronics & Communication Engineering '28 | Building Scalable Web, AI & Embedded Systems"
+
+platforms:
+  github:
+    username: "PRAJEENS2024"
+    exclude_forks: true
+    # Repositories excluded from language share calculation (e.g., vendor-heavy or cloned deps)
+    exclude_language_repos:
+      - "fossee-semester-intern-2026"
+      - "fossee-semester-internship-2026"
+    # Non-code container formats (e.g., .ipynb JSON outputs) excluded from language percentages
+    exclude_languages:
+      - "Jupyter Notebook"
+  leetcode:
+    username: "PRAJEEN24"
+  codechef:
+    username: "prajeens"
+  skillrack:
+    id: "515303"
+    key: "3742f907d9a4a34167e0c70e8dfe04481e54470b"
+  hackerrank:
+    username: "prajeensenthilk1"
+  geeksforgeeks:
+    username: "prajeensenti9s7"
+    profile_url: "https://www.geeksforgeeks.org/profile/prajeensenti9s7"
+
+theme:
+  bg_primary: "#0D1117"
+  bg_card: "#161B22"
+  bg_elevated: "#1C2333"
+  border: "#30363D"
+  text_primary: "#F0F6FC"
+  text_secondary: "#8B949E"
+  accent_cyan: "#38BDF8"
+  accent_indigo: "#818CF8"
+  accent_emerald: "#34D399"
+  accent_amber: "#FBBF24"
+  accent_rose: "#FB7185"
+
+automation:
+  snapshot_path: "data/stats_snapshot.json"
+  readme_path: "README.md"
+  svg_dir: "assets/svg"
+  request_timeout_seconds: 15
+  max_retries: 3

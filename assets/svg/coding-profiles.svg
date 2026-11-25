@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 302" width="100%" role="img" aria-label="Competitive Programming Dashboard">
+  <rect x="0.5" y="0.5" width="879" height="301" rx="14" fill="#0D1117" stroke="#30363D"/>
+
+  <!-- Left Hero Panel: LeetCode -->
+  <rect x="18" y="18" width="414" height="266" rx="10" fill="#161B22" stroke="#262C36"/>
+  <circle cx="38" cy="40" r="6" fill="#FFA116"/>
+  <text x="52" y="45" fill="#F0F6FC" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="15.5" font-weight="700">LeetCode</text>
+  <text x="414" y="45" text-anchor="end" fill="#FFA116" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">@PRAJEEN24</text>
+  <line x1="36" y1="58" x2="414" y2="58" stroke="#262C36"/>
+
+  <!-- Total Solved & Contest Rating -->
+  <text x="36" y="96" fill="#F8FAFC" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="34" font-weight="800">624</text>
+  <text x="36" y="114" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12">Problems Solved</text>
+
+  <rect x="216" y="72" width="198" height="46" rx="8" fill="#0D1117" stroke="#262C36"/>
+  <text x="230" y="91" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11">Contest Rating (79 contests)</text>
+  <text x="230" y="110" fill="#FFA116" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="16" font-weight="700">1,725 <tspan fill="#34D399" font-size="12">(Top 12.43%)</tspan></text>
+
+  <!-- Easy / Medium / Hard Bars -->
+  <text x="36" y="148" fill="#34D399" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Easy</text>
+  <rect x="108" y="138" width="230" height="10" rx="5" fill="#0D1117"/>
+  <rect x="108" y="138" width="130" height="10" rx="5" fill="#34D399"/>
+  <text x="414" y="148" text-anchor="end" fill="#E2E8F0" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12">352</text>
+
+  <text x="36" y="176" fill="#FBBF24" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Medium</text>
+  <rect x="108" y="166" width="230" height="10" rx="5" fill="#0D1117"/>
+  <rect x="108" y="166" width="95" height="10" rx="5" fill="#FBBF24"/>
+  <text x="414" y="176" text-anchor="end" fill="#E2E8F0" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12">259</text>
+
+  <text x="36" y="204" fill="#FB7185" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Hard</text>
+  <rect x="108" y="194" width="230" height="10" rx="5" fill="#0D1117"/>
+  <rect x="108" y="194" width="6" height="10" rx="5" fill="#FB7185"/>
+  <text x="414" y="204" text-anchor="end" fill="#E2E8F0" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12">13</text>
+
+  <line x1="36" y1="226" x2="414" y2="226" stroke="#262C36"/>
+  <text x="36" y="248" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">Streak: <tspan fill="#F0F6FC" font-weight="700">366d</tspan>  ·  Global Rank: <tspan fill="#F0F6FC" font-weight="700">#135,681</tspan></text>
+  <text x="36" y="268" fill="#64748B" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5">Live via LeetCode GraphQL · Synced 2026-11-25</text>
+
+  <!-- Right Top Panel: SkillRack -->
+  <rect x="448" y="18" width="414" height="126" rx="10" fill="#161B22" stroke="#262C36"/>
+  <circle cx="468" cy="40" r="6" fill="#38BDF8"/>
+  <text x="482" y="45" fill="#F0F6FC" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700">SkillRack</text>
+  <text x="844" y="45" text-anchor="end" fill="#38BDF8" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">Rank #7,855</text>
+  <line x1="466" y1="56" x2="844" y2="56" stroke="#262C36"/>
+
+  <text x="466" y="88" fill="#38BDF8" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="24" font-weight="800">1,567</text>
+  <text x="466" y="104" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11">Programs Solved</text>
+
+  <text x="612" y="88" fill="#F0F6FC" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="20" font-weight="700">539</text>
+  <text x="612" y="104" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11">Bronze Medals</text>
+
+  <text x="748" y="88" fill="#34D399" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="20" font-weight="700">17</text>
+  <text x="748" y="104" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11">Certificates</text>
+
+  <text x="466" y="128" fill="#94A3B8" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">C: 957 · Java: 266 · CPP23: 154 · Python3: 133</text>
+
+  <!-- Right Bottom Panel: CodeChef & HackerRank -->
+  <rect x="448" y="158" width="414" height="126" rx="10" fill="#161B22" stroke="#262C36"/>
+  <circle cx="468" cy="180" r="6" fill="#818CF8"/>
+  <text x="482" y="185" fill="#F0F6FC" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700">CodeChef &amp; HackerRank</text>
+  <text x="844" y="185" text-anchor="end" fill="#818CF8" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">1★ · 14 Contests</text>
+  <line x1="466" y1="196" x2="844" y2="196" stroke="#262C36"/>
+
+  <text x="466" y="226" fill="#F0F6FC" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="22" font-weight="800">503</text>
+  <text x="466" y="242" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11">CodeChef Solved</text>
+
+  <text x="612" y="226" fill="#818CF8" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="22" font-weight="800">1,053</text>
+  <text x="612" y="242" fill="#8B949E" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11">Rating (Peak 1,083)</text>
+
+  <text x="466" y="268" fill="#34D399" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">HackerRank: <tspan fill="#CBD5E1">Java (3 solved) · Sql (15 solved) · C (2 solved)</tspan></text>
+</svg>
