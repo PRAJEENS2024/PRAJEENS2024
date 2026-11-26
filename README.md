@@ -81,7 +81,7 @@ I'm **Prajeen S**, an Electronics and Communication Engineering student at **Sri
 <p align="center">
   <img src="./assets/svg/contribution-heatmap.svg" alt="GitHub 52-Week Contribution Calendar" width="100%" />
 </p>
-<p align="center"><sub>Source: GitHub GraphQL API · Last data change: 2026-11-25</sub></p>
+<p align="center"><sub>Source: GitHub GraphQL API · Last data change: 2026-11-26</sub></p>
 <!-- AUTO-GENERATED-END: github-stats -->
 
 ---
@@ -94,7 +94,7 @@ I'm **Prajeen S**, an Electronics and Communication Engineering student at **Sri
 </p>
 
 <p align="center">
-  <strong>Verified Solved Total:</strong> <code>2,696+</code><br/><br/>
+  <strong>Verified Solved Total:</strong> <code>2,698+</code><br/><br/>
   <a href="https://leetcode.com/u/PRAJEEN24" title="LeetCode"><img src="./assets/svg/logos/leetcode.svg" width="34" height="34" alt="LeetCode" /></a>&nbsp;&nbsp;
   <a href="https://www.skillrack.com/faces/resume.xhtml?id=515303&amp;key=3742f907d9a4a34167e0c70e8dfe04481e54470b" title="SkillRack"><img src="./assets/svg/logos/skillrack.svg" width="34" height="34" alt="SkillRack" /></a>&nbsp;&nbsp;
   <a href="https://www.codechef.com/users/prajeens" title="CodeChef"><img src="./assets/svg/logos/codechef.svg" width="34" height="34" alt="CodeChef" /></a>&nbsp;&nbsp;
@@ -113,17 +113,18 @@ I'm **Prajeen S**, an Electronics and Communication Engineering student at **Sri
 
 | Date | Repository | Event |
 | :--- | :--- | :--- |
+| `2026-11-25` | [PRAJEENS2024](https://github.com/PRAJEENS2024/PRAJEENS2024) | Pushed updates |
 | `2026-11-20` | [ECE-Connect](https://github.com/PRAJEENS2024/ECE-Connect) | Pushed updates |
 
 #### Recent LeetCode Accepted
 
 | Date | Problem |
 | :--- | :--- |
+| `2026-11-26` | [Make The String Great](https://leetcode.com/problems/make-the-string-great/) |
+| `2026-11-26` | [Stone Removal Game](https://leetcode.com/problems/stone-removal-game/) |
 | `2026-11-25` | [Replace Words](https://leetcode.com/problems/replace-words/) |
 | `2026-11-25` | [Minimum Sum of Squared Difference](https://leetcode.com/problems/minimum-sum-of-squared-difference/) |
 | `2026-11-25` | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) |
-| `2026-11-24` | [Maximum Subarray With Equal Products](https://leetcode.com/problems/maximum-subarray-with-equal-products/) |
-| `2026-11-23` | [Bank Account Summary II](https://leetcode.com/problems/bank-account-summary-ii/) |
 <!-- AUTO-GENERATED-END: activity -->
 
 ---

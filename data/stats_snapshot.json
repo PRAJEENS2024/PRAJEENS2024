@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "content_hash": "10cb7089918c96919b6c51f194f06ec1f3df7bbdb4256d79a14a1e977ec20f0d",
-  "last_updated": "2026-11-25",
+  "content_hash": "77564fd3d2d3f6656e56fce0bb77563997e11ac2d3f1404078b34e605ca7b88b",
+  "last_updated": "2026-11-26",
   "fetch_status": {
     "github": "live",
     "leetcode": "live",
@@ -1876,6 +1876,11 @@
           "date": "2026-11-25",
           "count": 2,
           "level": 1
+        },
+        {
+          "date": "2026-11-26",
+          "count": 0,
+          "level": 0
         }
       ],
       "top_repos": [
@@ -1885,7 +1890,7 @@
           "stars": 0,
           "forks": 0,
           "language": "Python",
-          "pushed_at": "2026-11-25T07:27:05Z",
+          "pushed_at": "2026-11-25T21:52:21Z",
           "url": "https://github.com/PRAJEENS2024/PRAJEENS2024",
           "homepage": null
         },
@@ -1942,6 +1947,12 @@
       ],
       "recent_events": [
         {
+          "date": "2026-11-25",
+          "repo": "PRAJEENS2024/PRAJEENS2024",
+          "action": "Pushed updates",
+          "url": "https://github.com/PRAJEENS2024/PRAJEENS2024"
+        },
+        {
           "date": "2026-11-20",
           "repo": "PRAJEENS2024/ECE-Connect",
           "action": "Pushed updates",
@@ -1951,11 +1962,11 @@
     },
     "leetcode": {
       "username": "PRAJEEN24",
-      "total_solved": 625,
-      "easy": 352,
+      "total_solved": 627,
+      "easy": 354,
       "medium": 260,
       "hard": 13,
-      "profile_ranking": 134702,
+      "profile_ranking": 134253,
       "streak": 365,
       "total_active_days": 365,
       "contests_attended": 79,
@@ -1963,6 +1974,18 @@
       "contest_global_ranking": 109346,
       "top_percentage": 12.45,
       "recent_submissions": [
+        {
+          "title": "Make The String Great",
+          "slug": "make-the-string-great",
+          "url": "https://leetcode.com/problems/make-the-string-great/",
+          "date": "2026-11-26"
+        },
+        {
+          "title": "Stone Removal Game",
+          "slug": "stone-removal-game",
+          "url": "https://leetcode.com/problems/stone-removal-game/",
+          "date": "2026-11-26"
+        },
         {
           "title": "Replace Words",
           "slug": "replace-words",
@@ -1980,18 +2003,6 @@
           "slug": "zigzag-conversion",
           "url": "https://leetcode.com/problems/zigzag-conversion/",
           "date": "2026-11-25"
-        },
-        {
-          "title": "Maximum Subarray With Equal Products",
-          "slug": "maximum-subarray-with-equal-products",
-          "url": "https://leetcode.com/problems/maximum-subarray-with-equal-products/",
-          "date": "2026-11-24"
-        },
-        {
-          "title": "Bank Account Summary II",
-          "slug": "bank-account-summary-ii",
-          "url": "https://leetcode.com/problems/bank-account-summary-ii/",
-          "date": "2026-11-23"
         }
       ]
     },
@@ -2136,6 +2147,12 @@
         }
       ],
       "recent_events": [
+        {
+          "date": "2026-11-25",
+          "repo": "PRAJEENS2024/PRAJEENS2024",
+          "action": "Pushed updates",
+          "url": "https://github.com/PRAJEENS2024/PRAJEENS2024"
+        },
         {
           "date": "2026-11-20",
           "repo": "PRAJEENS2024/ECE-Connect",
@@ -3983,18 +4000,23 @@
           "date": "2026-11-25",
           "count": 2,
           "level": 1
+        },
+        {
+          "date": "2026-11-26",
+          "count": 0,
+          "level": 0
         }
       ]
     },
     "coding": {
-      "verified_solved_total": 2696,
+      "verified_solved_total": 2698,
       "leetcode": {
         "username": "PRAJEEN24",
-        "total_solved": 625,
-        "easy": 352,
+        "total_solved": 627,
+        "easy": 354,
         "medium": 260,
         "hard": 13,
-        "profile_ranking": 134702,
+        "profile_ranking": 134253,
         "streak": 365,
         "total_active_days": 365,
         "contests_attended": 79,
@@ -4002,6 +4024,18 @@
         "contest_global_ranking": 109346,
         "top_percentage": 12.45,
         "recent_submissions": [
+          {
+            "title": "Make The String Great",
+            "slug": "make-the-string-great",
+            "url": "https://leetcode.com/problems/make-the-string-great/",
+            "date": "2026-11-26"
+          },
+          {
+            "title": "Stone Removal Game",
+            "slug": "stone-removal-game",
+            "url": "https://leetcode.com/problems/stone-removal-game/",
+            "date": "2026-11-26"
+          },
           {
             "title": "Replace Words",
             "slug": "replace-words",
@@ -4019,18 +4053,6 @@
             "slug": "zigzag-conversion",
             "url": "https://leetcode.com/problems/zigzag-conversion/",
             "date": "2026-11-25"
-          },
-          {
-            "title": "Maximum Subarray With Equal Products",
-            "slug": "maximum-subarray-with-equal-products",
-            "url": "https://leetcode.com/problems/maximum-subarray-with-equal-products/",
-            "date": "2026-11-24"
-          },
-          {
-            "title": "Bank Account Summary II",
-            "slug": "bank-account-summary-ii",
-            "url": "https://leetcode.com/problems/bank-account-summary-ii/",
-            "date": "2026-11-23"
           }
         ]
       },
