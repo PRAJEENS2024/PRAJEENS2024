@@ -81,7 +81,7 @@ I'm **Prajeen S**, an Electronics and Communication Engineering student at **Sri
 <p align="center">
   <img src="./assets/svg/contribution-heatmap.svg" alt="GitHub 52-Week Contribution Calendar" width="100%" />
 </p>
-<p align="center"><sub>Source: GitHub GraphQL API · Last data change: 2026-11-26</sub></p>
+<p align="center"><sub>Source: GitHub GraphQL API · Last data change: 2026-11-27</sub></p>
 <!-- AUTO-GENERATED-END: github-stats -->
 
 ---
@@ -120,11 +120,11 @@ I'm **Prajeen S**, an Electronics and Communication Engineering student at **Sri
 
 | Date | Problem |
 | :--- | :--- |
+| `2026-11-27` | [Maximum Number of Items From Sale I](https://leetcode.com/problems/maximum-number-of-items-from-sale-i/) |
 | `2026-11-26` | [Make The String Great](https://leetcode.com/problems/make-the-string-great/) |
 | `2026-11-26` | [Stone Removal Game](https://leetcode.com/problems/stone-removal-game/) |
 | `2026-11-25` | [Replace Words](https://leetcode.com/problems/replace-words/) |
 | `2026-11-25` | [Minimum Sum of Squared Difference](https://leetcode.com/problems/minimum-sum-of-squared-difference/) |
-| `2026-11-25` | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) |
 <!-- AUTO-GENERATED-END: activity -->
 
 ---

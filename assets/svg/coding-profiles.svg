@@ -5,7 +5,7 @@
   <rect x="1" y="1" width="878" height="40" rx="5" fill="#010409"/>
   <line x1="1" y1="41" x2="879" y2="41" stroke="#21262D"/>
   <text x="22" y="26" fill="#F0F6FC" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700">PROBLEM_SOLVING // LIVE PLATFORM METRICS</text>
-  <text x="858" y="26" text-anchor="end" fill="#6E7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">sync=2026-11-26</text>
+  <text x="858" y="26" text-anchor="end" fill="#6E7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">sync=2026-11-27</text>
 
   <!-- Vertical column split -->
   <line x1="448" y1="41" x2="448" y2="283" stroke="#21262D"/>
@@ -39,7 +39,7 @@
   <text x="426" y="216" text-anchor="end" fill="#C9D1D9" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12">13</text>
 
   <line x1="22" y1="238" x2="426" y2="238" stroke="#21262D"/>
-  <text x="22" y="262" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">streak=365d  ·  rank=#134,253</text>
+  <text x="22" y="262" fill="#8B949E" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5">streak=365d  ·  rank=#133,820</text>
 
   <!-- Right Top: SkillRack -->
   <g transform="translate(468.0, 56.0) scale(0.7500)" fill="#38BDF8"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2.6 14.6L5.8 12l3.6-3.6 1.4 1.4L8.6 12l2.2 2.2-1.4 1.4zm5.2 0l-1.4-1.4 2.2-2.2-2.2-2.2 1.4-1.4 3.6 3.6-3.6 3.6z"/></g>
